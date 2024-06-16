@@ -1,0 +1,15 @@
+{
+  "name": "stock",
+  "version": "1.0.0",
+  "description": "Medical stock management",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Selim Bamri",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^31.0.1",
+    "sqlite3": "^5.1.7"
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Se connecter</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/plugins/morris/morris.css" />
+    <link rel="stylesheet" href="assets/plugins/metro/MetroJs.min.css" />
+
+    <link
+      href="assets/plugins/carousel/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/plugins/carousel/owl.theme.default.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="assets/plugins/animate/animate.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/bootstrap-material-design.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div
+      class="card"
+      style="
+        width: 50%;
+        margin-right: 25%;
+        margin-left: auto;
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: auto;
+        padding: 3rem;
+      "
+    >
+      <img
+        src="pharmacy.png"
+        style="
+          width: 30%;
+          height: auto;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        "
+      />
+      <h1>Se connecter</h1>
+      <form id="loginForm">
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input
+            type="text"
+            id="username"
+            placeholder="Nom d'utilisateur"
+            required
+          />
+        </div>
+
+        <!-- Password input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input
+            type="password"
+            id="password"
+            placeholder="Mot de passe"
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          data-mdb-button-init
+          data-mdb-ripple-init
+          class="btn btn-primary btn-block mb-4"
+        >
+          Se connecter
+        </button>
+        <div>
+          <h5 style="color: brown" id="wrong-input"></h5>
+        </div>
+      </form>
+    </div>
+    <script src="renderer.js"></script>
+  </body>
+</html>

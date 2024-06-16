@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui"
+    />
+    <title>Tableau de bord</title>
+    <meta content="Admin Dashboard" name="description" />
+    <meta content="Mannatthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="assets/plugins/fullcalendar/vanillaCalendar.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/plugins/chartist/css/chartist.min.css"
+    />
+    <link rel="stylesheet" href="assets/plugins/morris/morris.css" />
+    <link rel="stylesheet" href="assets/plugins/metro/MetroJs.min.css" />
+
+    <link
+      href="assets/plugins/carousel/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/plugins/carousel/owl.theme.default.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="assets/plugins/animate/animate.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/bootstrap-material-design.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div id="preloader">
+      <div id="status"><div class="spinner"></div></div>
+    </div>
+
+    <header id="topnav">
+      <div class="navbar-custom">
+        <div class="container-fluid">
+          <div id="navigation">
+            <!-- Navigation Menu-->
+            <ul class="navigation-menu text-center">
+              <li class="has-submenu">
+                <a href="home.html"
+                  ><i class="mdi mdi-view-dashboard"></i>Tableau de bord</a
+                >
+              </li>
+              <li class="has-submenu">
+                <a href="produit.html"
+                  ><i class="mdi mdi-package"></i>Produits</a
+                >
+              </li>
+              <li class="has-submenu">
+                <a href="fournisseur.html"
+                  ><i class="mdi mdi-account-multiple"></i>Fournisseurs</a
+                >
+              </li>
+              <li class="has-submenu">
+                <a href="calcul.html"
+                  ><i class="mdi mdi-calculator"></i>Calcul</a
+                >
+              </li>
+              <li class="has-submenu">
+                <a href="edit-account.html"
+                  ><i class="mdi mdi-account-card-details"></i>Modifier le
+                  compte</a
+                >
+              </li>
+            </ul>
+            <!-- End navigation menu -->
+          </div>
+          <!-- end #navigation -->
+        </div>
+        <!-- end container -->
+      </div>
+      <!-- end navbar-custom -->
+    </header>
+    <!-- End Navigation Bar-->
+    <div class="wrapper">
+      <div class="container-fluid">
+        <div class="card m-b-30">
+          <div class="card-body">
+            <h4 class="mt-0 header-title">Donées</h4>
+            <form class="form-inline mb-0 row">
+              <div class="form-group col-3">
+                <label for="pUsine" class="bmd-label-floating"
+                  >Coût usine HT</label
+                >
+                <input
+                  type="number"
+                  class="form-control w-100"
+                  id="pUsine"
+                  value="0"
+                />
+              </div>
+              <div class="form-group col-3">
+                <label for="quantite" class="bmd-label-floating"
+                  >Quantité</label
+                >
+                <input
+                  type="number"
+                  class="form-control w-100"
+                  id="quantite"
+                  value="1"
+                />
+              </div>
+              <div class="form-group col-3">
+                <label for="bonification" class="bmd-label-floating"
+                  >Bonification grossisste</label
+                >
+                <input
+                  type="number"
+                  class="form-control w-100"
+                  id="bonification"
+                  value="0"
+                />
+              </div>
+              <div class="form-group col-3">
+                <label for="bonification" class="bmd-label-floating"
+                  >Bonification pharmacien</label
+                >
+                <input
+                  type="number"
+                  class="form-control w-100"
+                  id="bonificationPH"
+                  value="0"
+                />
+              </div>
+              <div class="form-group col-3">
+                <label for="revient" class="bmd-label-floating"
+                  >Pourcentage du revient</label
+                >
+                <input
+                  type="number"
+                  class="form-control w-100"
+                  id="revient"
+                  value="0"
+                />
+              </div>
+              <div class="form-group col-3">
+                <label for="vente" class="bmd-label-floating"
+                  >Pourcentage du vente</label
+                >
+                <input
+                  type="number"
+                  class="form-control w-100"
+                  id="vente"
+                  value="0"
+                />
+              </div>
+              <div class="form-group col-3">
+                <label for="grossisste" class="bmd-label-floating"
+                  >Pourcentage grossisste</label
+                >
+                <input
+                  type="number"
+                  class="form-control w-100"
+                  id="grossisste"
+                  value="0"
+                />
+              </div>
+              <div class="form-group col-3">
+                <label for="remise" class="bmd-label-floating"
+                  >Pourcentage du remise</label
+                >
+                <input
+                  type="number"
+                  class="form-control w-100"
+                  id="remise"
+                  value="0"
+                />
+              </div>
+              <div class="form-group col-6">
+                <label for="pubHT" class="bmd-label-floating"
+                  >Pourcentage prix public HT</label
+                >
+                <input
+                  type="number"
+                  class="form-control w-100"
+                  id="pubHT"
+                  value="0"
+                />
+              </div>
+              <div class="form-group col-6">
+                <label for="pubTTC" class="bmd-label-floating"
+                  >Pourcentage prix public TTC</label
+                >
+                <input
+                  type="number"
+                  class="form-control w-100"
+                  id="pubTTC"
+                  value="0"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Data-->
+        <div class="card m-b-30">
+          <div class="card-body">
+            <h4 class="mt-0 header-title">Résultats</h4>
+            <table id="datatable" class="table table-bordered">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Coût usine HT</th>
+                  <th>Coût Bonifié</th>
+                  <th>Coût de revient</th>
+                  <th>Prix vente</th>
+                  <th>Prix GR avant remise</th>
+                  <th>Prix GR après remise</th>
+                  <th>Remise GR</th>
+                  <th>Prix PH</th>
+                  <th>Prix Public HT</th>
+                  <th>Prix Public TTC</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><b>Unité</b></td>
+                  <td id="v1">0</td>
+                  <td id="v2">0</td>
+                  <td id="v3">0</td>
+                  <td id="v4">0</td>
+                  <td id="v5">0</td>
+                  <td id="v6">0</td>
+                  <td id="v7">0</td>
+                  <td id="v8">0</td>
+                  <td id="v9">0</td>
+                  <td id="v10">0</td>
+                </tr>
+                <tr>
+                  <td><b>Lot</b></td>
+                  <td id="v11">0</td>
+                  <td id="v21">0</td>
+                  <td id="v31">0</td>
+                  <td id="v41">0</td>
+                  <td id="v51">0</td>
+                  <td id="v61">0</td>
+                  <td id="v71">0</td>
+                  <td id="v81">0</td>
+                  <td id="v91">0</td>
+                  <td id="v101">0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">© 2024 Application de gestion de stock.</div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- jQuery  -->
+    <script>
+      // Get the input elements
+      const pUsine = document.getElementById("pUsine");
+      const bonification = document.getElementById("bonification");
+      const bonificationPH = document.getElementById("bonificationPH");
+      const revient = document.getElementById("revient");
+      const vente = document.getElementById("vente");
+      const grossisste = document.getElementById("grossisste");
+      const remise = document.getElementById("remise");
+      const pubHT = document.getElementById("pubHT");
+      const pubTTC = document.getElementById("pubTTC");
+      const quantite = document.getElementById("quantite");
+
+      // Get the output elements
+      const v1 = document.getElementById("v1");
+      const v2 = document.getElementById("v2");
+      const v3 = document.getElementById("v3");
+      const v4 = document.getElementById("v4");
+      const v5 = document.getElementById("v5");
+      const v6 = document.getElementById("v6");
+      const v7 = document.getElementById("v7");
+      const v8 = document.getElementById("v8");
+      const v9 = document.getElementById("v9");
+      const v10 = document.getElementById("v10");
+      const v11 = document.getElementById("v11");
+      const v21 = document.getElementById("v21");
+      const v31 = document.getElementById("v31");
+      const v41 = document.getElementById("v41");
+      const v51 = document.getElementById("v51");
+      const v61 = document.getElementById("v61");
+      const v71 = document.getElementById("v71");
+      const v81 = document.getElementById("v81");
+      const v91 = document.getElementById("v91");
+      const v101 = document.getElementById("v101");
+
+      // Function to format numbers conditionally
+      function formatNumber(value) {
+        if (value % 1 === 0) {
+          return value;
+        } else {
+          return value.toFixed(2);
+        }
+      }
+
+      // Function to update all values
+      function updateValues() {
+        v1.innerText = formatNumber(parseFloat(pUsine.value));
+        if (bonification.value == 0 && bonificationPH.value == 0) {
+          v2.innerText = formatNumber(parseFloat(v1.innerText));
+        } else if (bonificationPH.value == 0) {
+          v2.innerText = formatNumber(
+            parseFloat(v1.innerText) * (1 + 1 / parseFloat(bonification.value))
+          );
+        } else if (bonification.value == 0) {
+          v2.innerText = formatNumber(
+            parseFloat(v1.innerText) *
+              (1 + 1 / parseFloat(bonificationPH.value))
+          );
+        } else {
+          v2.innerText = formatNumber(
+            parseFloat(v1.innerText) *
+              (1 +
+                1 / parseFloat(bonificationPH.value) +
+                1 / parseFloat(bonification.value))
+          );
+        }
+        v3.innerText = formatNumber(
+          parseFloat(v2.innerText) * (1 + parseFloat(revient.value) / 100)
+        );
+        v4.innerText = formatNumber(
+          parseFloat(v3.innerText) * (1 + parseFloat(vente.value) / 100)
+        );
+        v5.innerText = formatNumber(
+          parseFloat(v4.innerText) * (1 + parseFloat(grossisste.value) / 100)
+        );
+        v7.innerText = formatNumber(
+          (parseFloat(v5.innerText) * parseFloat(remise.value)) / 100
+        );
+        v6.innerText = formatNumber(
+          parseFloat(v5.innerText) - parseFloat(v7.innerText)
+        );
+        v8.innerText = formatNumber(parseFloat(v5.innerText));
+        v9.innerText = formatNumber(
+          parseFloat(v8.innerText) * (1 + parseFloat(pubHT.value) / 100)
+        );
+        v10.innerText = formatNumber(
+          parseFloat(v9.innerText) * (1 + parseFloat(pubTTC.value) / 100)
+        );
+        v11.innerText = formatNumber(parseFloat(v1.innerText) * quantite.value);
+        v21.innerText = formatNumber(parseFloat(v2.innerText) * quantite.value);
+        v31.innerText = formatNumber(parseFloat(v3.innerText) * quantite.value);
+        v41.innerText = formatNumber(parseFloat(v4.innerText) * quantite.value);
+        v51.innerText = formatNumber(parseFloat(v5.innerText) * quantite.value);
+        v61.innerText = formatNumber(parseFloat(v6.innerText) * quantite.value);
+        v71.innerText = formatNumber(parseFloat(v7.innerText) * quantite.value);
+        v81.innerText = formatNumber(parseFloat(v8.innerText) * quantite.value);
+        v91.innerText = formatNumber(parseFloat(v9.innerText) * quantite.value);
+        v101.innerText = formatNumber(
+          parseFloat(v10.innerText) * quantite.value
+        );
+      }
+
+      // Attach the update function to the input event of each relevant input element
+      pUsine.addEventListener("input", updateValues);
+      bonification.addEventListener("input", updateValues);
+      bonificationPH.addEventListener("input", updateValues);
+      revient.addEventListener("input", updateValues);
+      vente.addEventListener("input", updateValues);
+      grossisste.addEventListener("input", updateValues);
+      remise.addEventListener("input", updateValues);
+      pubHT.addEventListener("input", updateValues);
+      pubTTC.addEventListener("input", updateValues);
+      quantite.addEventListener("input", updateValues);
+
+      pUsine.addEventListener("focus", () => pUsine.select());
+      bonification.addEventListener("focus", () => bonification.select());
+      bonificationPH.addEventListener("focus", () => bonificationPH.select());
+      revient.addEventListener("focus", () => revient.select());
+      vente.addEventListener("focus", () => vente.select());
+      grossisste.addEventListener("focus", () => grossisste.select());
+      remise.addEventListener("focus", () => remise.select());
+      pubHT.addEventListener("focus", () => pubHT.select());
+      pubTTC.addEventListener("focus", () => pubTTC.select());
+      quantite.addEventListener("focus", () => quantite.select());
+
+      // Initial call to set values based on initial input values
+      updateValues();
+    </script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap-material-design.js"></script>
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/detect.js"></script>
+    <script src="assets/js/fastclick.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/jquery.blockUI.js"></script>
+    <script src="assets/js/waves.js"></script>
+    <script src="assets/js/jquery.nicescroll.js"></script>
+    <script src="assets/js/jquery.scrollTo.min.js"></script>
+
+    <script src="assets/plugins/carousel/owl.carousel.min.js"></script>
+    <script src="assets/plugins/fullcalendar/vanillaCalendar.js"></script>
+    <script src="assets/plugins/peity/jquery.peity.min.js"></script>
+    <script src="assets/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="assets/plugins/chartist/js/chartist.min.js"></script>
+    <script src="assets/plugins/chartist/js/chartist-plugin-tooltip.min.js"></script>
+    <script src="assets/plugins/metro/MetroJs.min.js"></script>
+    <script src="assets/plugins/raphael/raphael.min.js"></script>
+    <script src="assets/plugins/morris/morris.min.js"></script>
+    <script src="assets/pages/dashborad.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
